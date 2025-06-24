@@ -1,0 +1,207 @@
+/* 基础样式 */
+:root {
+  --apple-dark: white;
+  --apple-blue: #0071E3;
+  --apple-light-gray: #F5F5F7;
+  --apple-card-gray: #2C2C2E;
+  --apple-text-gray: #86868B;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--apple-light-gray);
+  color: white;
+}
+
+.app-store {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--apple-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 顶部导航栏 */
+.app-header {
+  background-color: rgba(29, 29, 31, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 15px;
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+
+.app-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  color: var(--apple-text-gray);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  background-color: #3A3A3C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 主要内容区 */
+.app-content {
+  flex: 1;
+  padding: 15px;
+}
+
+/* 特色横幅 */
+.feature-banner {
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.banner-content h2 {
+  font-size: 24px;
+  margin: 0 0 5px 0;
+}
+
+.banner-content p {
+  margin: 0 0 15px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* 按钮样式 */
+.app-button {
+  background-color: white;
+  color: var(--apple-blue);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.get-button {
+  background-color: var(--apple-blue);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* 应用卡片 */
+.featured-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.app-card {
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.app-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.app-info h4 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.app-category {
+  margin: 0;
+  color: var(--apple-text-gray);
+  font-size: 12px;
+}
+
+.app-rating {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* 快速链接 */
+.quick-links {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0;
+}
+
+.quick-link {
+  color: var(--apple-blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 底部标签栏 */
+.app-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: var(--apple-dark);
+  border-top: 1px solid #333;
+}
+
+.tab-item {
+  color: var(--apple-text-gray);
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tab-item.active {
+  color: var(--apple-blue);
+}
